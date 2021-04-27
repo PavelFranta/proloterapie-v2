@@ -1,0 +1,31 @@
+.prague {
+  max-height: 500px;
+  position: relative;
+  overflow: hidden;
+}
+
+@media only screen and (min-width: 1800px) {
+  .prague {
+    top: -250px;
+  }
+}
+
+@media only screen and (min-width: 2730px) {
+  .prague {
+    top: -400px;
+  }
+}
+
+.max-h-500 {
+  max-height: 500px;
+}
+
+.triangle-down {
+  position: absolute;
+  left: 30px;
+  width: 0;
+  height: 0;
+  border-left: 30px solid transparent;
+  border-right: 30px solid transparent;
+  border-top: 30px solid white;
+}
