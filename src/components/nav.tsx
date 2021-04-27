@@ -18,8 +18,6 @@ const Nav: FC = () => {
     'bg-transparent text-white': offset === 0,
   })
 
-  const textBlack = classNames({'text-black': offset})
-
   return (
     <nav className={`${scrollStyles}`}>
       <a href={"/"} className="text-2xl pl-4">PROLOTERAPIE</a>

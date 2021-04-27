@@ -34,7 +34,7 @@ module.exports = {
         background_color: `#f7f0eb`,
         theme_color: `#a2466c`,
         display: `standalone`,
-        icon: 'src/assets/gatsby-icon.png', // This path is relative to the root of the site.
+        icon: 'src/assets/syring.png', // This path is relative to the root of the site.
         icon_options: {
           // For all the options available, please see the additional resources below.
           purpose: 'any maskable',
@@ -125,7 +125,7 @@ module.exports = {
         background_color: `#663399`,
         theme_color: `#663399`,
         display: `minimal-ui`,
-        icon: `src/assets/gatsby-icon.png`, // This path is relative to the root of the site.
+        icon: `src/assets/syring.png`, // This path is relative to the root of the site.
         icon_options: {
           purpose: 'any maskable',
         },
