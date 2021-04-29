@@ -24,15 +24,16 @@ export function handler(event, context, callback) {
     from: `${fullName} <${email}>`,
     phone: `${phone}`,
     to: process.env.MY_EMAIL_ADDRESS,
-    // template: 'proloterapie',
+    subject: 'Proloterapie - formulář',
+    template: 'proloterapie',
     replyTo: email,
     text: `${message}`,
-    // 'h:X-Mailgun-Variables': JSON.stringify({
-    //   fullName: `${fullName}`,
-    //   phone: `${phone}`,
-    //   email: `${email}`,
-    //   message: `${message}`,
-    // })
+    'h:X-Mailgun-Variables': JSON.stringify({
+      fullName: `${fullName}`,
+      phone: `${phone}`,
+      email: `${email}`,
+      message: `${message}`,
+    })
   }
 
   // Our MailGun code
