@@ -1,0 +1,11 @@
+.MuiFormControl-root.MuiTextField-root {
+  @apply w-full;
+}
+
+label + .MuiInput-formControl {
+  @apply mb-2;
+}
+
+.MuiButtonBase-root.MuiButton-root.MuiButton-contained.MuiButton-containedPrimary {
+  @apply py-2 mt-4 md:my-8 w-full;
+}

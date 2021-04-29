@@ -3,6 +3,7 @@ import { StaticImage } from "gatsby-plugin-image"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faSyringe, faHandHoldingMedical } from "@fortawesome/free-solid-svg-icons";
 import { faSun,  } from "@fortawesome/free-regular-svg-icons";
+import Contact from './contact';
 import '../css/main.css'
 
 const Main: FC = () => {
@@ -74,7 +75,7 @@ const Main: FC = () => {
       <h2 className="px-6 py-4 leading-10 text-2xl text-center bg-white">
         Domluvte si termín své konzultace
       </h2>
-      <div className="triangle-down" />
+      <Contact />
     </main>
   )
 }
