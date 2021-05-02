@@ -29,3 +29,15 @@
   border-right: 30px solid transparent;
   border-top: 30px solid white;
 }
+
+.triangle-down.green {
+  border-top: 30px solid rgba(6, 78, 59, 1);
+}
+
+.quotes {
+  quotes: "'" "'";
+}
+
+a {
+  @apply underline;
+}

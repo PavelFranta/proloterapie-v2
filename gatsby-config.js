@@ -1,25 +1,13 @@
 const tailwindConfig = require('./tailwind.config.js')
-const { createProxyMiddleware } = require("http-proxy-middleware")
 
 module.exports = {
    // for avoiding CORS while developing Netlify Functions locally
   // read more: https://www.gatsbyjs.org/docs/api-proxy/#advanced-proxying
-  developMiddleware: app => {
-    app.use(
-      "/.netlify/functions/",
-      createProxyMiddleware({
-        target: "http://localhost:9000",
-        pathRewrite: {
-          "/.netlify/functions/": "",
-        },
-      })
-    )
-  },
   siteMetadata: {
-    title: `Gatsby Default Starter`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-    author: `@gatsbyjs`,
-    keywords: ['fun'],
+    title: `Proloterapie - PRAHA - dr. Půlpán`,
+    description: `Proloterapie je léčebná metoda založená na stimulaci přirozeného procesu hojení těla.`,
+    author: `Pavel Franta`,
+    keywords: ['medicine, healing, medical, spinal disc'],
     lang: 'cs',
   },
   plugins: [

@@ -2,7 +2,7 @@ import { FC } from 'react'
 import { StaticImage } from "gatsby-plugin-image"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faSyringe, faHandHoldingMedical } from "@fortawesome/free-solid-svg-icons";
-import { faSun,  } from "@fortawesome/free-regular-svg-icons";
+import { faSun, } from "@fortawesome/free-regular-svg-icons";
 import Contact from './contact';
 import '../css/main.css'
 
@@ -50,6 +50,8 @@ const Main: FC = () => {
 		      	</p>
           </div>
         </div>
+        <div className="max-w-screen-lg m-auto mb-8 p-4 text-2xl text-white leading-normal text-center quotes">Proloterapie je metodou 1.volby u většiny výhřezů meziobratlových plotének.<br /> 
+        Operace pouze u těch případů, kdy hrozí ztráta motoriky neboli hybnosti.</div>
       </div>
       <h2 className="px-6 py-4 leading-10 text-2xl text-center bg-white">Detailní popis léčby</h2>
       <div className="triangle-down" />
@@ -76,6 +78,41 @@ const Main: FC = () => {
         Domluvte si termín své konzultace
       </h2>
       <Contact />
+      <h2 className="px-6 py-4 leading-10 text-2xl text-center text-white bg-green-900">Dr. Půlpán, jediný PROLOTERAPEUT v České a Slovenské republice.</h2>
+      <div className="triangle-down green" />
+      <div className="bg-black">
+        <div className="max-w-screen-lg mt-6 m-auto text-white py-10 px-6 md:py-15 bg-black">
+          <h3 className="mb-6 text-xl font-bold">Více než 30 let praxe u náš i v zahraničí</h3>
+          <div className="mb-6">
+            <h3 className="text-xl font-bold">Do roku 1990: </h3>
+            <ul className="list-disc pl-4">
+              <li>Ortopedická klinika ILF v Praze na Bulovce (zároveň osobní lékař dvacetinásobných mistrů světa v kolové bratrů Pospíšilových)</li>
+              <li>Česká atestace z ortopedie</li>
+            </ul>
+          </div>
+          <div className="mb-6">
+            <h3 className="text-xl font-bold">Od roku 1990: </h3>
+            <ul className="list-disc pl-4">
+              <li>Ortopedická Universitní klinika Heidelberg (zároveň lékař německých reprezentantů v cyklistice, vzpíraní, judu v Olympijském středisku Heidelberg)</li>
+              <li>Začíná provádět konservativní léčbu výhřezu meziobratlové ploténky (Proloterapii)</li>
+              <li>Léčbu artrózy kloubů bez operace (preparátem Hyalart od firmy Bayer)</li>
+              <li>Německá atestace z ortopedie (říjen 1994)</li>
+            </ul>
+          </div>
+          <div className="mb-6">
+            <h3 className="text-xl font-bold">Akupunktura celotělní </h3>
+            <ul className="list-disc pl-4">
+              <li>Diplom z Ortopedické univerzitní kliniky Heidelberg</li>
+            </ul>
+          </div>
+          <div className="mb-6">
+            <h3 className="text-xl font-bold">Manipulační léčba(Chirotherapie) </h3>
+            <ul className="list-disc pl-4">
+              <li>Diplom z Ortopedické univerzitní kliniky Heidelberg</li>
+            </ul>
+          </div>
+        </div>
+      </div>
     </main>
   )
 }

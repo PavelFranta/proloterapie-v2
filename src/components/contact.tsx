@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import Button from '@material-ui/core/Button';
 import { ValidatorForm, TextValidator } from 'react-material-ui-form-validator';
 const endpoints = {
-  contact: "/.netlify/functions/sendEmail",
+  contact: "/api/send-email",
 }
 const axios = require("axios")
 import '../css/form.css'
@@ -27,16 +27,19 @@ class Contact extends React.Component {
   handleSubmit = e => {
     const { fullName, email, phone, message } = this.state
     const data = { fullName, email, phone, message }
-  
-    axios.post(endpoints.contact, JSON.stringify(data)).then(response => {
+    
+
+    axios.post(endpoints.contact, JSON.stringify(data))
+    .then(response => {
       if (response.status !== 200) {
         this.handleError(response.status)
       } else {
         this.handleSuccess()
       }
-    })
+    }).catch(error => console.log(error));
     e.preventDefault()
   }
+
   handleSuccess = () => {
     this.setState({
       fullName: "",
@@ -47,6 +50,7 @@ class Contact extends React.Component {
       error: false,
     })
   }
+  
   handleError = msg => {
     this.setState({
       loading: false,

@@ -7,7 +7,7 @@ const IndexPage:FC = () => {
 
 return (
   <Layout>
-    <SEO title="Home" />
+    <SEO />
   </Layout>
 )
 }
