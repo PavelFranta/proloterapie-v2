@@ -1,6 +1,8 @@
 const nodemailer = require('nodemailer');
 
 exports.handler = function (event, context, callback) {
+    let recepients = process.env.SMTP_RECEPIENT;
+    recepients = recepients.split(',');
 
     let data = JSON.parse(event.body)
 
@@ -15,7 +17,7 @@ exports.handler = function (event, context, callback) {
 
     transporter.sendMail({
         from: 'Proloterapie@proloterapie.com',
-        to: [process.env.SMTP_RECEPIENT],
+        to: recepients,
         subject: `Proloterapie - webový formulář`,
         html: `
             <h1>Proloterapie dr. Půlpán</h1>
