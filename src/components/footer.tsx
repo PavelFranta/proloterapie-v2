@@ -3,7 +3,11 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faEnvelope } from "@fortawesome/free-regular-svg-icons"
 import { faPhone } from "@fortawesome/free-solid-svg-icons"
 
-const Footer: FC = () => {
+interface Props {
+  translation
+}
+
+const Footer: FC<Props> = ({translation}) => {
   return (
     <div className="bg-gray-900">
     <footer className="w-full bg-gray-900 max-w-screen-lg m-auto">
@@ -12,8 +16,8 @@ const Footer: FC = () => {
       >
         <div className="mb-5 md:mb-0">
           <h3>Dr. med. <strong>Jiří Půlpán</strong></h3>
-          <span className="block mb-6">Česká a německá atestace</span>
-          <h3 className="text-left"><strong>Kontakt</strong></h3>
+          <span className="block mb-6">{translation.atest}</span>
+          <h3 className="text-left"><strong>{translation.contact}</strong></h3>
           <a href="mailto:info@ortopedie-pulpan.com" className="flex underline mb-2">
             <FontAwesomeIcon icon={faEnvelope} size="lg" className="mr-4 mt-1" />info@ortopedie-pulpan.com
           </a>
@@ -22,14 +26,14 @@ const Footer: FC = () => {
           </a>
         </div>
         <div className="mb-5 md:mb-0">
-          <h3 className="text-left"><strong>Ordinace</strong></h3>
+          <h3 className="text-left"><strong>{translation.office}</strong></h3>
           <p>Dykova 31</p>
           <p>Praha-Vinohrady</p>
           <p>10100</p>
         </div>
         <div>
           <div className="flex flex-col">
-          <h3 className="mb-2"><strong>Odkazy</strong></h3>
+          <h3 className="mb-2"><strong>{translation.links}</strong></h3>
           <a href="https://www.treatingpain.com/treatments/prolotherapy/" target="_blank" rel="noopener noreferrer">treatingpain.com</a>
           <a href="https://prolotherapy.com/" target="_blank" rel="noopener noreferrer">prolotherapy.com</a>
           <a href="https://www.spine-health.com/" target="_blank" rel="noopener noreferrer">spine-health.com</a>

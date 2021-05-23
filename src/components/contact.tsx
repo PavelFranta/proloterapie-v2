@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import Button from '@material-ui/core/Button';
 import { ValidatorForm, TextValidator } from 'react-material-ui-form-validator';
 const endpoints = {
@@ -16,7 +16,7 @@ class Contact extends React.Component {
     message: "",
   }
 
-  handleChange = event => {
+  handleChange = (event) => {
     const name = event.target.name
     const value = event.target.value
     const statesToUpdate = {}
@@ -24,7 +24,7 @@ class Contact extends React.Component {
     this.setState(statesToUpdate)
   }
 
-  handleSubmit = e => {
+  handleSubmit = (e) => {
     const { fullName, email, phone, message } = this.state
     const data = { fullName, email, phone, message }
     
@@ -61,6 +61,8 @@ class Contact extends React.Component {
 
   render() {
     const { fullName, email, phone, message } = this.state;
+    const translation = this.props.translation;
+    
     return (
       <div className="bg-white">
         <ValidatorForm
@@ -72,20 +74,20 @@ class Contact extends React.Component {
           <div className="flex flex-col md:flex-row md:gap-10 justify-center">
             <div className="flex-1">
               <TextValidator
-                label="Jméno a příjmení"
+                label={translation.formName}
                 onChange={this.handleChange}
                 name="fullName"
                 value={fullName}
                 validators={['required']}
-                errorMessages={['Jak Vám máme říkat?']}
+                errorMessages={[translation.formNameError]}
               />
               <TextValidator
-                label="Telefon"
+                label={translation.formTel}
                 onChange={this.handleChange}
                 name="phone"
                 value={phone}
                 validators={['required']}
-                errorMessages={['Kam Vám můžeme zavolat?']}
+                errorMessages={[translation.formTelError]}
               />
               <TextValidator
                 label="E-mail"
@@ -93,12 +95,12 @@ class Contact extends React.Component {
                 name="email"
                 validators={['isEmail']}
                 value={email}
-                errorMessages={['Je tento email správný?']}
+                errorMessages={[translation.formEmailError]}
               />
             </div>
             <div className="flex-1 mt-4 sm:mt-0">
               <TextValidator
-                label="Krátký popis potíží"
+                label={translation.formBriefDescription}
                 onChange={this.handleChange}
                 rows={8}
                 name="message"
@@ -106,11 +108,13 @@ class Contact extends React.Component {
                 validators={['required']}
                 variant="outlined"
                 multiline
-                errorMessages={['Co Vás trápí ?']}
+                errorMessages={[translation.formBriefDescriptionError]}
               />
             </div>
           </div>
-          <Button variant="contained" color="primary" type="submit">ODESLAT</Button>
+          <Button variant="contained" color="primary" type="submit">
+            {translation.formSend}
+          </Button>
         </ValidatorForm>
       </div>
     );
