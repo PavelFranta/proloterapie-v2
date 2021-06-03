@@ -7,7 +7,7 @@ module.exports = {
     title: `Proloterapie - PRAHA - dr. Půlpán`,
     description: `Proloterapie je léčebná metoda založená na stimulaci přirozeného procesu hojení těla.`,
     author: `Pavel Franta`,
-    keywords: ['medicine, healing, medical, spinal disc'],
+    keywords: ['spine, spinal disc, výhřez, ploténka, léčba bez operace, prolotetapie, záda, páteř, bolest'],
     lang: 'cs',
   },
   plugins: [
